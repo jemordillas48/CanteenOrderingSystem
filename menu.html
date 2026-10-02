@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CampusBite | Menu</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+<header class="main-header">
+
+    <div class="header-inner">
+
+        <a href="menu.html" class="brand">
+
+            <div class="brand-icon small">
+                🍴
+            </div>
+
+            <div>
+                <h2>CampusBite</h2>
+                <span>School Canteen</span>
+            </div>
+
+        </a>
+
+        <nav>
+
+            <a href="menu.html" class="active">
+                Menu
+            </a>
+
+            <a href="cart.html">
+                Cart
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+            </a>
+
+            <a
+                href="index.html"
+                onclick="logout()"
+            >
+                Logout
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="page-container">
+
+    <section class="hero-section">
+
+        <div class="hero-content">
+
+            <span class="small-label">
+                TODAY'S MENU
+            </span>
+
+            <h1>
+                Good food.
+                <br>
+                <span>Good school days.</span>
+            </h1>
+
+            <p>
+                Order your favorite meals, snacks, and drinks
+                from the school canteen.
+            </p>
+
+            <a
+                href="#menu"
+                class="btn btn-primary"
+            >
+                Browse Menu
+            </a>
+
+        </div>
+
+        <div class="hero-illustration">
+
+            <div class="food-circle">
+                🍔
+            </div>
+
+            <div class="floating-food food-one">
+                🍟
+            </div>
+
+            <div class="floating-food food-two">
+                🥤
+            </div>
+
+            <div class="floating-food food-three">
+                🍗
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section
+        class="menu-section"
+        id="menu"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="small-label">
+                    EXPLORE
+                </span>
+
+                <h2>
+                    Our Menu
+                </h2>
+
+            </div>
+
+            <p>
+                Freshly prepared favorites for students.
+            </p>
+
+        </div>
+
+
+        <div class="category-buttons">
+
+            <button
+                class="category-btn active"
+                onclick="filterMenu('all', this)"
+            >
+                All
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterMenu('meals', this)"
+            >
+                Meals
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterMenu('snacks', this)"
+            >
+                Snacks
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterMenu('drinks', this)"
+            >
+                Drinks
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterMenu('desserts', this)"
+            >
+                Desserts
+            </button>
+
+        </div>
+
+
+        <div
+            class="menu-grid"
+            id="menuGrid"
+        >
+
+            <div
+                class="food-card"
+                data-category="meals"
+            >
+
+                <div class="food-image purple">
+                    🍗
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        MEAL
+                    </span>
+
+                    <h3>
+                        Chicken Rice Meal
+                    </h3>
+
+                    <p>
+                        Crispy chicken with steamed rice.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₱85
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Chicken Rice Meal',
+                                85
+                            )"
+                            class="add-button"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="food-card"
+                data-category="meals"
+            >
+
+                <div class="food-image cream">
+                    🍝
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        MEAL
+                    </span>
+
+                    <h3>
+                        Spaghetti
+                    </h3>
+
+                    <p>
+                        Sweet-style spaghetti with cheese.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₱65
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Spaghetti',
+                                65
+                            )"
+                            class="add-button"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="food-card"
+                data-category="meals"
+            >
+
+                <div class="food-image purple">
+                    🍔
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        MEAL
+                    </span>
+
+                    <h3>
+                        Classic Burger
+                    </h3>
+
+                    <p>
+                        Beef patty with fresh vegetables.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₱55
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Classic Burger',
+                                55
+                            )"
+                            class="add-button"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="food-card"
+                data-category="snacks"
+            >
+
+                <div class="food-image cream">
+                    🍟
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        SNACK
+                    </span>
+
+                    <h3>
+                        French Fries
+                    </h3>
+
+                    <p>
+                        Crispy golden potato fries.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₱40
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'French Fries',
+                                40
+                            )"
+                            class="add-button"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="food-card"
+                data-category="snacks"
+            >
+
+                <div class="food-image purple">
+                    🌭
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        SNACK
+                    </span>
+
+                    <h3>
+                        Cheese Hotdog
+                    </h3>
+
+                    <p>
+                        Hotdog topped with melted cheese.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₱45
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Cheese Hotdog',
+                                45
+                            )"
+                            class="add-button"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="food-card"
+                data-category="drinks"
+            >
+
+                <div class="food-image cream">
+                    🥤
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        DRINK
+                    </span>
+
+                    <h3>
+                        Iced Tea
+                    </h3>
+
+                    <p>
+                        Refreshing sweet iced tea.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₱30
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Iced Tea',
+                                30
+                            )"
+                            class="add-button"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="food-card"
+                data-category="drinks"
+            >
+
+                <div class="food-image purple">
+                    🥛
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        DRINK
+                    </span>
+
+                    <h3>
+                        Chocolate Drink
+                    </h3>
+
+                    <p>
+                        Cold creamy chocolate drink.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₱35
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Chocolate Drink',
+                                35
+                            )"
+                            class="add-button"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="food-card"
+                data-category="desserts"
+            >
+
+                <div class="food-image cream">
+                    🍰
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        DESSERT
+                    </span>
+
+                    <h3>
+                        Cream Cake
+                    </h3>
+
+                    <p>
+                        Soft cake with creamy frosting.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₱45
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Cream Cake',
+                                45
+                            )"
+                            class="add-button"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

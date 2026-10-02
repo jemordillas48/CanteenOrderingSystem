@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CampusBite | Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body class="dashboard-page">
+
+<header class="main-header">
+
+    <div class="header-inner">
+
+        <a href="admin.html" class="brand">
+
+            <div class="brand-icon small">
+                ⚙
+            </div>
+
+            <div>
+                <h2>CampusBite</h2>
+                <span>Administration</span>
+            </div>
+
+        </a>
+
+        <nav>
+
+            <a href="pos.html">
+                POS
+            </a>
+
+            <a href="kitchen.html">
+                Kitchen
+            </a>
+
+            <a href="admin.html" class="active">
+                Admin
+            </a>
+
+            <a
+                href="index.html"
+                onclick="logout()"
+            >
+                Logout
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <div class="dashboard-heading">
+
+        <div>
+
+            <span class="small-label">
+                ADMINISTRATION
+            </span>
+
+            <h1>
+                System Overview
+            </h1>
+
+            <p>
+                Monitor canteen operations and sales.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                👥
+            </div>
+
+            <div>
+
+                <span>
+                    Students
+                </span>
+
+                <strong>
+                    1,245
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🧾
+            </div>
+
+            <div>
+
+                <span>
+                    Total Orders
+                </span>
+
+                <strong>
+                    328
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🍽
+            </div>
+
+            <div>
+
+                <span>
+                    Menu Items
+                </span>
+
+                <strong>
+                    42
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card highlight">
+
+            <div class="stat-icon">
+                ₱
+            </div>
+
+            <div>
+
+                <span>
+                    Daily Revenue
+                </span>
+
+                <strong>
+                    ₱24,680
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="admin-grid">
+
+        <div class="admin-card">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="small-label">
+                        MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-actions">
+
+                <button>
+                    🍔 Manage Menu
+                </button>
+
+                <button>
+                    👥 Manage Students
+                </button>
+
+                <button>
+                    📦 Inventory
+                </button>
+
+                <button>
+                    📊 Sales Reports
+                </button>
+
+                <button>
+                    👨‍🍳 Staff Accounts
+                </button>
+
+                <button>
+                    ⚙ System Settings
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-card">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="small-label">
+                        INVENTORY
+                    </span>
+
+                    <h2>
+                        Stock Alerts
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="inventory-item">
+
+                <span>
+                    Chicken
+                </span>
+
+                <strong class="stock-low">
+                    Low Stock
+                </strong>
+
+            </div>
+
+
+            <div class="inventory-item">
+
+                <span>
+                    Rice
+                </span>
+
+                <strong class="stock-good">
+                    Good
+                </strong>
+
+            </div>
+
+
+            <div class="inventory-item">
+
+                <span>
+                    Soft Drinks
+                </span>
+
+                <strong class="stock-good">
+                    Good
+                </strong>
+
+            </div>
+
+
+            <div class="inventory-item">
+
+                <span>
+                    Cheese
+                </span>
+
+                <strong class="stock-low">
+                    Low Stock
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="admin-card recent-orders">
+
+        <div class="panel-header">
+
+            <div>
+
+                <span class="small-label">
+                    TRANSACTIONS
+                </span>
+
+                <h2>
+                    Recent Orders
+                </h2>
+
+            </div>
+
+            <button class="refresh-button">
+                View All
+            </button>
+
+        </div>
+
+
+        <div class="order-table">
+
+            <div class="table-header">
+
+                <span>
+                    ORDER
+                </span>
+
+                <span>
+                    STUDENT
+                </span>
+
+                <span>
+                    TOTAL
+                </span>
+
+                <span>
+                    STATUS
+                </span>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <span class="order-number">
+                    #CB-1025
+                </span>
+
+                <span>
+                    Juan Dela Cruz
+                </span>
+
+                <strong>
+                    ₱180
+                </strong>
+
+                <span class="status preparing">
+                    Preparing
+                </span>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <span class="order-number">
+                    #CB-1024
+                </span>
+
+                <span>
+                    Maria Santos
+                </span>
+
+                <strong>
+                    ₱120
+                </strong>
+
+                <span class="status completed">
+                    Completed
+                </span>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <span class="order-number">
+                    #CB-1023
+                </span>
+
+                <span>
+                    Mark Reyes
+                </span>
+
+                <strong>
+                    ₱95
+                </strong>
+
+                <span class="status completed">
+                    Completed
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

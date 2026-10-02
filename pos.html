@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CampusBite | POS</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body class="dashboard-page">
+
+<header class="main-header">
+
+    <div class="header-inner">
+
+        <a href="pos.html" class="brand">
+
+            <div class="brand-icon small">
+                ₱
+            </div>
+
+            <div>
+                <h2>CampusBite</h2>
+                <span>Point of Sale</span>
+            </div>
+
+        </a>
+
+        <nav>
+
+            <a href="pos.html" class="active">
+                POS
+            </a>
+
+            <a href="kitchen.html">
+                Kitchen
+            </a>
+
+            <a href="admin.html">
+                Admin
+            </a>
+
+            <a
+                href="index.html"
+                onclick="logout()"
+            >
+                Logout
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <div class="dashboard-heading">
+
+        <div>
+
+            <span class="small-label">
+                CASHIER DASHBOARD
+            </span>
+
+            <h1>
+                Point of Sale
+            </h1>
+
+            <p>
+                Manage customer orders and payments.
+            </p>
+
+        </div>
+
+        <div class="date-badge">
+            📅 September 25, 2026
+        </div>
+
+    </div>
+
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🧾
+            </div>
+
+            <div>
+
+                <span>
+                    Pending Orders
+                </span>
+
+                <strong>
+                    12
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                👨‍🍳
+            </div>
+
+            <div>
+
+                <span>
+                    Preparing
+                </span>
+
+                <strong>
+                    8
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <span>
+                    Completed
+                </span>
+
+                <strong>
+                    37
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card highlight">
+
+            <div class="stat-icon">
+                ₱
+            </div>
+
+            <div>
+
+                <span>
+                    Today's Sales
+                </span>
+
+                <strong>
+                    ₱8,450
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="pos-layout">
+
+        <div class="orders-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="small-label">
+                        LIVE ORDERS
+                    </span>
+
+                    <h2>
+                        Recent Orders
+                    </h2>
+
+                </div>
+
+                <button
+                    class="refresh-button"
+                    onclick="location.reload()"
+                >
+                    ↻ Refresh
+                </button>
+
+            </div>
+
+
+            <div class="order-table">
+
+                <div class="table-header">
+
+                    <span>
+                        ORDER
+                    </span>
+
+                    <span>
+                        CUSTOMER
+                    </span>
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                    <span>
+                        STATUS
+                    </span>
+
+                </div>
+
+
+                <div class="table-row">
+
+                    <span class="order-number">
+                        #CB-1025
+                    </span>
+
+                    <span>
+                        Juan Dela Cruz
+                    </span>
+
+                    <strong>
+                        ₱180
+                    </strong>
+
+                    <span class="status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <div class="table-row">
+
+                    <span class="order-number">
+                        #CB-1024
+                    </span>
+
+                    <span>
+                        Maria Santos
+                    </span>
+
+                    <strong>
+                        ₱120
+                    </strong>
+
+                    <span class="status preparing">
+                        Preparing
+                    </span>
+
+                </div>
+
+
+                <div class="table-row">
+
+                    <span class="order-number">
+                        #CB-1023
+                    </span>
+
+                    <span>
+                        Mark Reyes
+                    </span>
+
+                    <strong>
+                        ₱95
+                    </strong>
+
+                    <span class="status completed">
+                        Completed
+                    </span>
+
+                </div>
+
+
+                <div class="table-row">
+
+                    <span class="order-number">
+                        #CB-1022
+                    </span>
+
+                    <span>
+                        Angela Cruz
+                    </span>
+
+                    <strong>
+                        ₱210
+                    </strong>
+
+                    <span class="status completed">
+                        Completed
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <aside class="payment-panel">
+
+            <span class="small-label">
+                PAYMENT
+            </span>
+
+            <h2>
+                Checkout
+            </h2>
+
+            <div class="selected-order">
+
+                <span>
+                    Selected Order
+                </span>
+
+                <strong>
+                    #CB-1025
+                </strong>
+
+            </div>
+
+            <div class="payment-total">
+
+                <span>
+                    Amount Due
+                </span>
+
+                <strong>
+                    ₱180.00
+                </strong>
+
+            </div>
+
+
+            <label>
+                Payment Method
+            </label>
+
+            <select>
+
+                <option>
+                    Cash
+                </option>
+
+                <option>
+                    GCash
+                </option>
+
+                <option>
+                    Card
+                </option>
+
+            </select>
+
+
+            <label>
+                Amount Received
+            </label>
+
+            <input
+                type="number"
+                placeholder="₱0.00"
+            >
+
+
+            <button
+                class="btn btn-primary full-width"
+            >
+                Complete Payment
+            </button>
+
+        </aside>
+
+    </section>
+
+</main>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
